@@ -1,0 +1,58 @@
+.btn--primary {
+  display: grid;
+  width: 345px;
+  height: 55px;
+  background-color: rgba(45, 54, 81, 0.8);
+  border: 2px solid #2d3651;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Roboto";
+  padding-left: 2px;
+  @include lg {
+    height: 59px;
+  }
+  @include md {
+    width: 345px;
+    height: 53px;
+  }
+  @include sm {
+    width: calc(100% - 5px);
+  }
+}
+
+.skills:hover .btn--primary {
+  border: 2px solid #2d3651;
+}
+
+.posts:hover .btn--primary {
+  border: 2px solid #2d3651;
+}
+
+.btn {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s;
+}
+
+.btn:hover,
+.bnt:focus {
+  background-color: #d66926;
+}
+
+.btn--light {
+  width: 245px;
+  height: 56px;
+  border: 2px solid #ffffff;
+  background-color: #ffffff1a;
+  @include lg {
+    width: 195px;
+    height: 46px;
+  }
+  @include md {
+    width: 165px;
+    height: 37px;
+  }
+}

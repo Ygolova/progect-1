@@ -1,0 +1,314 @@
+@import "../presets/mixins-media";
+
+.header {
+  display: grid;
+  height: 1080px;
+  position: relative;
+  background-size: cover;
+  @include lg {
+    width: 992px;
+    height: 766px;
+  }
+
+  @include md {
+    width: 768px;
+    height: 560px;
+  }
+
+  @include sm {
+    width: 576px;
+    height: 992px;
+    background-position: 50% 50%;
+  }
+}
+
+.header-content {
+  display: grid;
+}
+
+h1 {
+  font-size: 60px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  font-weight: 300;
+  font-family: "Roboto Slab";
+}
+
+.header-content__container {
+  display: grid;
+  z-index: 1;
+  max-width: 1340px;
+  margin: auto;
+  padding-left: 54px;
+  grid-row-gap: 50px;
+  @include lg {
+    grid-row-gap: 40px;
+  }
+
+  @include md {
+    grid-row-gap: 27px;
+  }
+
+  @include sm {
+    grid-row-gap: 38px;
+  }
+}
+
+.header-content__title {
+  @include lg {
+    margin-top: 24px;
+    margin-right: 55px;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: #ffffff;
+    font-weight: 300;
+    font-family: "Roboto Slab";
+    text-align: center;
+  }
+
+  @include md {
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: 300;
+    font-family: "Roboto Slab";
+    text-align: center;
+  }
+
+  @include sm {
+    width: 310px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-left: 18px;
+  }
+}
+
+.header-content__actions {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Roboto";
+  display: grid;
+  z-index: 1;
+  justify-content: center;
+  grid-template-areas: "a a";
+  margin-left: 7px;
+  grid-column-gap: 20px;
+  padding-bottom: 3px;
+  @include lg {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Roboto";
+    margin-left: 0;
+    margin-right: 53px;
+    grid-column-gap: 22px;
+    margin-bottom: 20px;
+  }
+  @include md {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Roboto";
+  }
+}
+
+.header-menu {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  left: 0;
+  @include md {
+    width: 768px;
+    height: 92px;
+    background-color: rgba(68, 89, 110, 0.25);
+    box-shadow: 0px 0px 25px 5px black;
+  }
+
+  @include sm {
+    width: 576px;
+    height: 92px;
+  }
+}
+
+.header-menu__container {
+  z-index: 2;
+  display: grid;
+  max-width: 1340px;
+  margin: auto;
+  padding-top: 36px;
+  padding-right: 255px;
+  padding-left: 310px;
+  grid-template-columns: auto 1fr;
+
+  @include lg {
+    padding-left: 19px;
+    padding-top: 35px;
+    padding-right: 18px;
+  }
+}
+
+.header-logo {
+  font-size: 23px;
+  letter-spacing: 6px;
+}
+
+.header-logo__link {
+  display: block;
+  padding-left: 2px;
+}
+
+.header-logo__accent {
+  padding: 13px 0 13px 4px;
+  margin-right: -7px;
+  border: 3px solid #d53d27;
+}
+
+.header-navbar {
+  &__list {
+    display: grid;
+    padding-top: 3px;
+    gap: 44px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    list-style: none;
+    justify-content: end;
+    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    @include md {
+      display: none;
+    }
+
+    @include md {
+      position: absolute;
+      background-color: rgba(68, 89, 110, 0.9);
+      padding-top: 0px;
+      padding-left: 0px;
+      margin: 0 0 0 407px;
+      box-shadow: 3px 3px 30px 3px;
+      top: 92px;
+    }
+
+    @include sm {
+      margin: 0 0 0 216px;
+    }
+  }
+  &__item {
+    @include md {
+      margin: 20px 30px;
+    }
+  }
+  &__link {
+    @include md {
+    }
+  }
+}
+
+.header-overlay {
+  position: absolute;
+  opacity: 0.8;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #2d3651;
+}
+
+.header-navbar {
+  @include md {
+    display: grid;
+    justify-content: end;
+  }
+  @include md {
+    .header-navbar__btn {
+      width: 30px;
+      height: 22.5px;
+      position: relative;
+      transform: rotate(0deg);
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+
+      &-row {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 50%;
+        background-color: #ffffff;
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+
+        &:nth-child(even) {
+          left: 50%;
+          border-radius: 0 3px 3px 0;
+        }
+        &:nth-child(even) {
+          left: 50%;
+          border-radius: 0 3px 3px 0;
+        }
+        &:nth-child(odd) {
+          left: 0px;
+          border-radius: 3px 0 0 3px;
+        }
+        &:nth-child(1),
+        &:nth-child(2) {
+          top: 0px;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+          top: 9px;
+        }
+
+        &:nth-child(5),
+        &:nth-child(6) {
+          top: 18px;
+        }
+      }
+      &.active span {
+        &:nth-child(1),
+        &:nth-child(6) {
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2),
+        &:nth-child(5) {
+          transform: rotate(-45deg);
+        }
+
+        &:nth-child(1) {
+          left: 2.5px;
+          top: 3.5px;
+        }
+
+        &:nth-child(2) {
+          left: calc(50% - 2.5px);
+          top: 3.5px;
+        }
+
+        &:nth-child(3) {
+          left: -50%;
+          opacity: 0;
+        }
+
+        &:nth-child(4) {
+          left: 100%;
+          opacity: 0;
+        }
+
+        &:nth-child(5) {
+          left: 2.5px;
+          top: 14.5px;
+        }
+
+        &:nth-child(6) {
+          left: calc(50% - 2.5px);
+          top: 14.5px;
+        }
+      }
+    }
+  }
+}
