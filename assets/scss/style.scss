@@ -1,0 +1,33 @@
+@import "presets/variables";
+@import "presets/mixins-media";
+
+@import "header/header";
+
+@import "main/btn";
+@import "main/main";
+
+@import "footer/footer";
+
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */

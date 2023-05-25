@@ -1,0 +1,248 @@
+.posts * {
+  box-sizing: border-box;
+}
+
+.posts {
+  display: grid;
+  padding-top: 100px;
+  margin: auto;
+  justify-content: center;
+  @include lg {
+    padding-top: 80px;
+  }
+  @include md {
+    padding-top: 61px;
+  }
+}
+
+.fa-pinterest {
+  color: #000;
+}
+
+.posts__container {
+  max-width: 1340px;
+  padding: 0 20px;
+  @include lg {
+  }
+  @include sm {
+    max-width: 576px;
+    padding: 0 20px;
+  }
+}
+
+.posts h2 {
+  padding-bottom: 48px;
+  font-size: 40px;
+  letter-spacing: 4px;
+  line-height: 48px;
+  color: #2d3651;
+  font-weight: 700;
+  font-family: "Roboto Slab";
+  @include lg {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    line-height: 40px;
+    color: #2d3651;
+    font-weight: 700;
+    padding-bottom: 41px;
+    margin-top: -1px;
+  }
+  @include md {
+    max-width: 724px;
+    height: 53px;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    padding-bottom: 65px;
+    line-height: 1.2em;
+  }
+  @include sm {
+    padding-bottom: 0px;
+    width: 100%;
+    height: 64px;
+    text-align: center;
+  }
+}
+
+.post-item__link {
+  width: 100%;
+  background-color: #eeeeee;
+  display: grid;
+  height: 100%;
+  grid-template-rows: 300px 1fr;
+  transition: background-color 0.5s;
+}
+
+.post-item__link:hover {
+  background-color: #d8d8d8;
+}
+
+.post-item__link:hover img {
+  transform: scale(1.1);
+}
+
+.post-item__image {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.about__content p:first-of-type::after {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 200px;
+  right: -52px;
+  content: "";
+  background-color: rgba(99, 117, 136, 0.1);
+  @include lg {
+    right: -25px;
+  }
+  @include md {
+    right: -10px;
+  }
+}
+
+.about__content p:first-of-type {
+  position: relative;
+}
+
+.post-item {
+  background-color: #eeeeee;
+  height: 541px;
+  transition: background-color 0.5s;
+  @include lg {
+    height: 521px;
+  }
+  @include md {
+    height: 542px;
+  }
+  @include sm {
+    height: 484px;
+  }
+}
+
+img {
+  transition: transform 0.5s;
+}
+
+.posts__grid {
+  display: grid;
+  grid-template-areas:
+    "p1 p1 p2 p3"
+    "p4 p5 p6 p6";
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px 20px;
+  @include lg {
+    grid-template-areas:
+      "p1 p1 p2"
+      "p3 p4 p4"
+      "p5 p5 p6";
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 20px;
+  }
+  @include md {
+    grid-template-areas:
+      "p1 p2"
+      "p3 p4"
+      "p5 p6";
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 20px;
+  }
+  @include sm {
+    grid-template-areas:
+      "p1"
+      "p2"
+      "p3"
+      "p4"
+      "p5"
+      "p6";
+    grid-template-columns: 1fr;
+  }
+}
+
+.post-item__image img {
+  width: 100%;
+  @include lg {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.post-item__caption {
+  display: grid;
+  padding: 0px 20px;
+  font-size: 16px;
+  color: #637588;
+  font-weight: 400;
+  font-family: "Roboto";
+  text-align: center;
+  align-content: center;
+  @include sm {
+    padding: 21px 20px 40px 21px;
+  }
+}
+
+.post-item__caption h3 {
+  padding: 17px 0;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  font-size: 1.125rem;
+  font-family: "Roboto Slab";
+}
+
+.post-item__caption p {
+  margin: 15px 0;
+}
+
+.posts__actions {
+  display: grid;
+  margin-top: 20px;
+  justify-content: center;
+  margin-left: 0px;
+  margin-bottom: 100px;
+  @include lg {
+    margin-top: 0px;
+    margin-bottom: 80px;
+  }
+  @include md {
+    margin-bottom: 60px;
+  }
+  @include sm {
+    display: flex;
+    margin-bottom: 60px;
+  }
+}
+
+.posts .btn--primary {
+  width: 350px;
+  height: 60px;
+
+  @include md {
+    height: 60px;
+  }
+
+  @include sm {
+    width: 100%;
+  }
+}
+
+.post-item:nth-of-type(1) {
+  grid-area: p1;
+}
+.post-item:nth-of-type(2) {
+  grid-area: p2;
+}
+.post-item:nth-of-type(3) {
+  grid-area: p3;
+}
+.post-item:nth-of-type(4) {
+  grid-area: p4;
+}
+.post-item:nth-of-type(5) {
+  grid-area: p5;
+}
+.post-item:nth-of-type(6) {
+  grid-area: p6;
+}
