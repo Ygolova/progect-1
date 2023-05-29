@@ -103,7 +103,6 @@
 
 .skills__actions a {
   @include lg {
-    padding-top: 3px;
   }
 }
 
@@ -128,10 +127,11 @@
   font-weight: 700;
   font-family: "Roboto";
   text-align: center;
-  transition: 1s;
+  transition: background-color 0.5s, border-color 0.5s, color 0.5s;
 
   @include md {
-    font-size: 18px;
+    letter-spacing: 0.1em;
+    font-size: 1.125rem;
   }
   @include sm {
     font-size: 1.125rem;
@@ -149,7 +149,6 @@
   }
   @include md {
     padding-top: 20px;
-
   }
   @include sm {
     display: block;

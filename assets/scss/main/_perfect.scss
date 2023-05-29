@@ -1,35 +1,80 @@
 .pixa1 {
   margin-top: -1px;
+  @include lg {
+    margin-top: 0;
+  }
 }
 
 .pixa2 {
   margin-top: -1px;
+  @include lg {
+    margin-top: 0;
+  }
+  @include md {
+    margin-top: -1px;
+  }
+  @include sm {
+    margin-top: 0;
+  }
 }
 
 .pixa3 {
   margin-top: -1px;
+  @include md {
+    margin-top: 0;
+  }
+  @include sm {
+    margin-top: -1px;
+  }
 }
 
 .pixa4 {
   margin-top: -1px;
+  @include sm {
+    margin-top: 0;
+  }
 }
 
 .pixa5 {
   margin-top: -1px;
+  @include sm {
+    margin-top: 0;
+  }
 }
 
 .pixa6 {
   margin-top: -1px;
+  @include md {
+    margin-top: 0;
+  }
+  @include sm {
+    margin-top: -1px;
+  }
 }
 
 .pixa7 {
   margin-top: 0px;
+  @include lg {
+    margin-top: -1px;
+  }
+  @include md {
+    margin-top: 0;
+  }
 }
 
 .pixa8 {
   margin-top: 0px;
+  @include md {
+    margin-top: -1px;
+  }
+  @include sm {
+    margin-top: 0;
+  }
 }
 
 .pixa9 {
   margin-top: 0px;
+  @include lg {
+    margin-top: -1px;
+  }
 }

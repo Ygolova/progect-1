@@ -5,20 +5,19 @@
   background-color: #e5e5e5;
   padding-top: 100px;
   letter-spacing: 0.055em;
-  padding-bottom: 107px;
+  padding-bottom: 85px;
   padding-right: 69px;
   margin: auto;
   @include lg {
-    padding-bottom: 105px;
+    padding-bottom: 64px;
     padding-top: 80px;
     letter-spacing: 0.055em;
-    height: 484px;
     position: relative;
   }
 
   @include md {
-    width: 768px;
-    height: 530px;
+    width: 100%;
+    padding-bottom: 44px;
     padding-top: 60px;
     padding-left: 2px;
   }
@@ -26,8 +25,7 @@
   @include sm {
     padding-top: 60px;
     width: 576px;
-    height: 998px;
-    padding-bottom: 101px;
+    padding-bottom: 45px;
   }
 }
 
@@ -82,24 +80,27 @@
   display: grid;
   grid-template-columns: 1fr 200px;
   gap: 93px;
+  padding: 0 20px;
   margin: auto;
   @include lg {
+    padding: 0;
     position: relative;
     padding-left: 20px;
-    gap: 0px;
+    gap: 66px;
   }
   @include md {
     padding-left: 18px;
   }
   @include sm {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 }
 
 .about__content {
   display: grid;
   max-width: 927px;
-  height: 319px;
+  height: 100%;
   font-size: 18px;
   line-height: 1.18;
   color: #637588;
@@ -109,6 +110,7 @@
     line-height: 1.15;
     max-width: 635px;
     font-size: 16px;
+    height: 100%;
   }
   @include md {
     max-width: 471px;
@@ -130,13 +132,14 @@
   padding-top: 7px;
   @include lg {
     width: 267px;
-    padding-top: 11px;
+    padding-top: 12px;
     margin-left: -20px;
   }
   @include md {
     padding-top: 10px;
     width: 236px;
     height: 425px;
+    padding-left: 1px;
   }
   @include sm {
     width: 268px;
