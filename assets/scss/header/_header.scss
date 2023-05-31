@@ -2,330 +2,300 @@
 
 .header {
   display: grid;
-  min-height: 100vh;
   position: relative;
   background-position: 50% 50%;
   background-size: cover;
+  height: 100vh;
   @include lg {
     height: 100vh;
   }
 
-  @include md {
-    height: 560px;
-  }
-
   @include sm {
     height: 100vh;
   }
-}
 
-.header-content {
-  display: grid;
-}
+  &-logo {
+    font-size: 1.5rem;
+    margin-top: -1px;
+    letter-spacing: 0.22em;
 
-h1 {
-  font-size: 3.75rem;
-  padding-left: 7px;
-  letter-spacing: 0.08em;
-  color: #ffffff;
-  font-weight: 300;
-  font-family: "Roboto Slab";
-}
+    &__link {
+      display: block;
+    }
 
-.header-content__container {
-  display: grid;
-  text-align: center;
-  z-index: 1;
-  max-width: 1340px;
-  margin: auto;
-  padding-right: 7px;
-  grid-row-gap: 50px;
-  @include lg {
-    grid-row-gap: 41px;
+    &__accent {
+      padding: 13px 1px 13px 5px;
+      margin-right: -0.31em;
+      border: 3px solid #d53d27;
+    }
   }
 
-  @include md {
-    grid-row-gap: 32px;
+  &-overlay {
+    position: absolute;
+    opacity: 0.8;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #2d3651;
   }
 
-  @include sm {
-    grid-row-gap: 33px;
-  }
-}
-
-.header-content__title {
-  @include lg {
-    margin-top: 17px;
-    font-size: 2.5rem;
-    letter-spacing: 0.08em;
-    color: #ffffff;
-    font-weight: 300;
-    font-family: "Roboto Slab";
-    text-align: center;
-  }
-
-  @include md {
-    font-size: 1.875rem;
-    letter-spacing: 0.08em;
-    color: #ffffff;
-    font-weight: 300;
-    font-family: "Roboto Slab";
-    text-align: center;
-  }
-
-  @include sm {
-    width: 330px;
-    font-size: 1.875rem;
-    letter-spacing: 0.08em;
-    margin-top: 20px;
-    line-height: 36px;
-  }
-}
-
-.header-content__actions {
-  font-size: 18px;
-  letter-spacing: 2px;
-  color: #ffffff;
-  font-weight: 400;
-  font-family: "Roboto";
-  display: grid;
-  z-index: 1;
-  justify-content: center;
-  grid-template-areas: "a a";
-  margin-left: 7px;
-  grid-column-gap: 20px;
-  padding-bottom: 3px;
-  @include lg {
-    font-size: 16px;
-    padding-left: 8px;
-    letter-spacing: 2px;
-    color: #ffffff;
-    font-weight: 400;
-    font-family: "Roboto";
-    margin-left: 0;
-    grid-column-gap: 20px;
-    margin-bottom: 16px;
-  }
-  @include md {
-    font-size: 16px;
-    letter-spacing: 2px;
-    color: #ffffff;
-    font-weight: 400;
-    font-family: "Roboto";
-  }
-  @include sm {
-    row-gap: 20px;
-    grid-template-areas:
-      "a"
-      "a";
-  }
-}
-
-.header-menu {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  right: 0;
-  left: 0;
-  @include md {
-    max-width: 768px;
-    height: 100px;
-    background-color: rgba(68, 89, 110, 0.25);
-    box-shadow: 0px 0px 25px 5px black;
-  }
-
-  @include sm {
-    max-width: 576px;
-  }
-}
-
-.header-menu__container {
-  z-index: 2;
-  display: grid;
-  max-width: 1320px;
-  margin: auto;
-  padding-top: 37px;
-  grid-template-columns: auto 1fr;
-
-  @include lg {
-    padding-left: 10px;
-    padding-top: 37px;
-    padding-right: 18px;
-  }
-}
-
-.header-navbar__link {
-  padding: 0 10px;
-  letter-spacing: 0.1em;
-  font-size: 1.125rem;
-  @include md {
-    padding: 10px 20px;
-    display: block;
-  }
-}
-
-.header-logo {
-  padding-left: 8px;
-  font-size: 1.5rem;
-  margin-top: -1px;
-  letter-spacing: 0.22em;
-}
-
-.header-logo__link {
-  display: block;
-  padding-left: 2px;
-}
-
-.header-logo__accent {
-  padding: 13px 1px 13px 5px;
-  margin-right: -0.31em;
-  border: 3px solid #d53d27;
-}
-
-.header-navbar {
-  &__list {
+  &-content {
     display: grid;
-    padding-top: 2px;
-    gap: 20px;
-    letter-spacing: 1px;
-    font-size: 18px;
-    list-style: none;
-    justify-content: end;
-    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    &__title {
+      @include lg {
+        margin-top: 17px;
+        font-size: 2.5rem;
+        letter-spacing: 0.08em;
+        color: #ffffff;
+        font-weight: 300;
+        font-family: "Roboto Slab";
+        text-align: center;
+      }
 
-    @include lg {
-      margin-right: -8px;
+      @include md {
+        font-size: 1.875rem;
+        letter-spacing: 0.08em;
+        color: #ffffff;
+        font-weight: 300;
+        font-family: "Roboto Slab";
+        text-align: center;
+      }
+
+      @include sm {
+        width: 330px;
+        font-size: 1.875rem;
+        letter-spacing: 0.08em;
+        margin-top: 20px;
+        line-height: 36px;
+      }
     }
 
-    @include md {
-      display: none;
+    &__actions {
+      font-size: 18px;
+      letter-spacing: 2px;
+      color: #ffffff;
+      font-weight: 400;
+      font-family: "Roboto";
+      display: grid;
+      z-index: 1;
+      justify-content: center;
+      grid-template-areas: "a a";
+      margin-left: 7px;
+      grid-column-gap: 20px;
+      padding-bottom: 3px;
+      @include lg {
+        font-size: 16px;
+        padding-left: 8px;
+        letter-spacing: 2px;
+        color: #ffffff;
+        font-weight: 400;
+        font-family: "Roboto";
+        margin-left: 0;
+        grid-column-gap: 20px;
+        margin-bottom: 16px;
+      }
+      @include md {
+        font-size: 16px;
+        letter-spacing: 2px;
+        color: #ffffff;
+        font-weight: 400;
+        font-family: "Roboto";
+      }
+      @include sm {
+        row-gap: 20px;
+        grid-template-areas:
+          "a"
+          "a";
+      }
     }
 
+    &__container {
+      display: grid;
+      text-align: center;
+      z-index: 1;
+      max-width: 1340px;
+      margin: auto;
+      padding-right: 7px;
+      grid-row-gap: 50px;
+      @include lg {
+        grid-row-gap: 41px;
+      }
+
+      @include md {
+        grid-row-gap: 32px;
+      }
+
+      @include sm {
+        grid-row-gap: 33px;
+      }
+    }
+  }
+
+  &-menu {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    left: 0;
     @include md {
-      position: absolute;
-      background-color: rgba(68, 89, 110, 0.9);
-      padding-top: 0px;
-      padding-left: 0px;
-      right: 30px;
-      box-shadow: 3px 3px 30px 3px;
-      top: 100%;
-      text-align: right;
+      max-width: 768px;
+      height: 100px;
+      background-color: rgba(68, 89, 110, 0.25);
+      box-shadow: 0px 0px 25px 5px black;
     }
 
     @include sm {
+      max-width: 576px;
+    }
+    &__container {
+      z-index: 2;
+      display: grid;
+      max-width: 1340px;
+      margin: auto;
+      grid-template-columns: auto 1fr;
+      padding: 37px 20px 0 20px;
+      box-sizing: border-box;
     }
   }
-  &__item {
-    @include md {
-      margin: 20px 10px;
-    }
-  }
-  &__link {
-    @include md {
-    }
-  }
-}
 
-.header-overlay {
-  position: absolute;
-  opacity: 0.8;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #2d3651;
-}
+  &-navbar {
+    &__list {
+      display: grid;
+      margin: 0 -10px 0 0;
+      padding-top: 2px;
+      gap: 20px;
+      letter-spacing: 1px;
+      font-size: 18px;
+      list-style: none;
+      justify-content: end;
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
 
-.header-navbar {
-  @include md {
-    display: grid;
-    justify-content: end;
-  }
-  @include md {
-    .header-navbar__btn {
-      width: 30px;
-      height: 22.5px;
-      position: relative;
-      transform: rotate(0deg);
-      transition: 0.5s ease-in-out;
-      cursor: pointer;
-
-      &-row {
-        display: block;
-        position: absolute;
-        height: 3px;
-        width: 50%;
-        background-color: #ffffff;
-        opacity: 1;
-        transform: rotate(0deg);
-        transition: 0.25s ease-in-out;
-
-        &:nth-child(even) {
-          left: 50%;
-          border-radius: 0 3px 3px 0;
-        }
-        &:nth-child(even) {
-          left: 50%;
-          border-radius: 0 3px 3px 0;
-        }
-        &:nth-child(odd) {
-          left: 0px;
-          border-radius: 3px 0 0 3px;
-        }
-        &:nth-child(1),
-        &:nth-child(2) {
-          top: 0px;
-        }
-
-        &:nth-child(3),
-        &:nth-child(4) {
-          top: 9px;
-        }
-
-        &:nth-child(5),
-        &:nth-child(6) {
-          top: 18px;
-        }
+      @include lg {
+        margin-right: -10px;
       }
-      &.active span {
-        &:nth-child(1),
-        &:nth-child(6) {
-          transform: rotate(45deg);
-        }
 
-        &:nth-child(2),
-        &:nth-child(5) {
-          transform: rotate(-45deg);
-        }
+      @include md {
+        display: none;
+      }
 
-        &:nth-child(1) {
-          left: 2.5px;
-          top: 3.5px;
-        }
+      @include md {
+        position: absolute;
+        background-color: rgba(68, 89, 110, 0.9);
+        padding-top: 0px;
+        padding-left: 0px;
+        right: 30px;
+        box-shadow: 3px 3px 30px 3px;
+        top: 100%;
+        text-align: right;
+      }
+    }
 
-        &:nth-child(2) {
-          left: calc(50% - 2.5px);
-          top: 3.5px;
-        }
+    &__item {
+      @include md {
+        margin: 20px 10px;
+      }
+    }
 
-        &:nth-child(3) {
-          left: -50%;
-          opacity: 0;
-        }
+    &__link {
+      padding: 0 10px;
+      letter-spacing: 0.1em;
+      font-size: 1.125rem;
+      @include md {
+        padding: 10px 20px;
+        display: block;
+      }
+    }
 
-        &:nth-child(4) {
-          left: 100%;
-          opacity: 0;
-        }
+    @include md {
+      display: grid;
+      justify-content: end;
+      &__btn {
+        width: 30px;
+        margin-top: 2px;
+        height: 22.5px;
+        position: relative;
+        transform: rotate(0deg);
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
 
-        &:nth-child(5) {
-          left: 2.5px;
-          top: 14.5px;
-        }
+        &-row {
+          display: block;
+          position: absolute;
+          height: 3px;
+          width: 50%;
+          background-color: #ffffff;
+          opacity: 1;
+          transform: rotate(0deg);
+          transition: 0.25s ease-in-out;
 
-        &:nth-child(6) {
-          left: calc(50% - 2.5px);
-          top: 14.5px;
+          &:nth-child(even) {
+            left: 50%;
+            border-radius: 0 3px 3px 0;
+          }
+          &:nth-child(even) {
+            left: 50%;
+            border-radius: 0 3px 3px 0;
+          }
+          &:nth-child(odd) {
+            left: 0px;
+            border-radius: 3px 0 0 3px;
+          }
+          &:nth-child(1),
+          &:nth-child(2) {
+            top: 0px;
+          }
+
+          &:nth-child(3),
+          &:nth-child(4) {
+            top: 9px;
+          }
+
+          &:nth-child(5),
+          &:nth-child(6) {
+            top: 18px;
+          }
+        }
+        &.active span {
+          &:nth-child(1),
+          &:nth-child(6) {
+            transform: rotate(45deg);
+          }
+
+          &:nth-child(2),
+          &:nth-child(5) {
+            transform: rotate(-45deg);
+          }
+
+          &:nth-child(1) {
+            left: 2.5px;
+            top: 3.5px;
+          }
+
+          &:nth-child(2) {
+            left: calc(50% - 2.5px);
+            top: 3.5px;
+          }
+
+          &:nth-child(3) {
+            left: -50%;
+            opacity: 0;
+          }
+
+          &:nth-child(4) {
+            left: 100%;
+            opacity: 0;
+          }
+
+          &:nth-child(5) {
+            left: 2.5px;
+            top: 14.5px;
+          }
+
+          &:nth-child(6) {
+            left: calc(50% - 2.5px);
+            top: 14.5px;
+          }
         }
       }
     }

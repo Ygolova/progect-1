@@ -10,14 +10,16 @@
   font-weight: 400;
   font-family: "Roboto";
   @include lg {
-    height: 56px;
-  }
-  @include md {
     width: 346px;
     height: 56px;
   }
   @include sm {
     width: calc(100% - 3px);
+  }
+  &:hover,
+  &:focus {
+    background-color: #d66926;
+    border-color: white;
   }
 }
 

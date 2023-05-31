@@ -2,88 +2,83 @@
   text-align: center;
   background-color: #2d3651;
   box-sizing: border-box;
-}
 
-.footer__container {
-  max-width: 1340px;
-  background-color: #2d3651;
-  margin: auto;
-  @include lg {
-    max-width: 992px;
+  &__container {
+    max-width: 1340px;
+    background-color: #2d3651;
+    margin: auto;
+    @include lg-md {
+      max-width: 992px;
+    }
+    @include md-sm {
+      max-width: 768px;
+    }
+    @include sm {
+      max-width: 576px;
+    }
   }
-  @include md {
-    max-width: 768px;
-  }
-  @include sm {
-    max-width: 576px;
-  }
-}
 
-.footer__social {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-  justify-content: center;
-  position: relative;
-  padding-top: 50px;
-
-  @include md {
+  &__social {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    justify-content: center;
+    position: relative;
     padding-top: 50px;
+
+    @include md {
+      padding-top: 50px;
+    }
+
+    & a {
+      display: block;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: calc(50% - 37.5px);
+      width: 75px;
+      height: 2px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
   }
-}
 
-.footer__social a {
-  display: block;
-}
-
-.footer__social::after {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: calc(50% - 37.5px);
-  width: 75px;
-  height: 2px;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.footer__copy span:nth-of-type(1) {
-  margin-left: 8px;
-  letter-spacing: 0.33em;
-  font-weight: 100;
-  color: #637588;
-}
-
-.footer__copy span:nth-of-type(2) {
-  margin-bottom: 10px;
-}
-
-.footer__copy {
-  margin-top: 39px;
-  padding-bottom: 70px;
-  font-size: 16px;
-  letter-spacing: 0.05em;
-  color: white;
-  font-weight: 700;
-  font-family: "Roboto";
-  text-align: center;
-  @include lg {
-    margin-top: 40px;
-    padding-bottom: 71px;
+  &__copy {
+    margin-top: 39px;
+    padding-bottom: 70px;
     font-size: 16px;
     letter-spacing: 0.05em;
-    line-height: 18px;
     color: white;
     font-weight: 700;
     font-family: "Roboto";
     text-align: center;
-  }
-  @include md {
-    line-height: 19px;
-    margin-top: 39px;
-    padding-bottom: 70px;
-  }
-}
+    @include lg-md {
+      margin-top: 40px;
+      padding-bottom: 71px;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      line-height: 18px;
+    }
+    @include md {
+      line-height: 19px;
+      margin-top: 39px;
+      padding-bottom: 70px;
+    }
+    & span:nth-of-type(1) {
+      margin-left: 8px;
+      letter-spacing: 0.33em;
+      font-weight: 100;
+      color: #637588;
+    }
 
-.fab {
-  font-size: 36px;
-  padding: 10px;
+    & span:nth-of-type(2) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .fab {
+    font-size: 36px;
+    padding: 10px;
+  }
 }
