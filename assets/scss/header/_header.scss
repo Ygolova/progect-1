@@ -6,7 +6,7 @@
   background-position: 50% 50%;
   background-size: cover;
   height: 100vh;
-  @include lg {
+  @include lg-min {
     height: 100vh;
   }
 
@@ -43,8 +43,8 @@
   &-content {
     display: grid;
     &__title {
-      @include lg {
-        margin-top: 17px;
+      @include lg-md {
+        margin-top: 20px;
         font-size: 2.5rem;
         letter-spacing: 0.08em;
         color: #ffffff;
@@ -53,21 +53,20 @@
         text-align: center;
       }
 
-      @include md {
+      @include md-sm {
+        margin-top: 20px;
         font-size: 1.875rem;
-        letter-spacing: 0.08em;
-        color: #ffffff;
-        font-weight: 300;
-        font-family: "Roboto Slab";
-        text-align: center;
+        margin-bottom: 34px;
       }
 
       @include sm {
+        margin-top: 20px;
         width: 330px;
         font-size: 1.875rem;
         letter-spacing: 0.08em;
-        margin-top: 20px;
+        margin-top: 19px;
         line-height: 36px;
+        margin-bottom: 33px;
       }
     }
 
@@ -84,7 +83,7 @@
       margin-left: 7px;
       grid-column-gap: 20px;
       padding-bottom: 3px;
-      @include lg {
+      @include lg-md {
         font-size: 16px;
         padding-left: 8px;
         letter-spacing: 2px;
@@ -95,14 +94,20 @@
         grid-column-gap: 20px;
         margin-bottom: 16px;
       }
-      @include md {
+      @include md-sm {
+        margin-left: 9px;
         font-size: 16px;
         letter-spacing: 2px;
         color: #ffffff;
         font-weight: 400;
         font-family: "Roboto";
+        margin-bottom: 15px;
       }
       @include sm {
+        margin-left: 8px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        letter-spacing: 2px;
         row-gap: 20px;
         grid-template-areas:
           "a"
@@ -115,19 +120,20 @@
       text-align: center;
       z-index: 1;
       max-width: 1340px;
+      padding: 150px 0;
       margin: auto;
       padding-right: 7px;
       grid-row-gap: 50px;
-      @include lg {
-        grid-row-gap: 41px;
+      @include lg-md {
+        grid-row-gap: 39px;
       }
 
-      @include md {
-        grid-row-gap: 32px;
+      @include md-sm {
+        grid-row-gap: 0;
       }
 
       @include sm {
-        grid-row-gap: 33px;
+        grid-row-gap: 0px;
       }
     }
   }
@@ -145,16 +151,13 @@
       box-shadow: 0px 0px 25px 5px black;
     }
 
-    @include sm {
-      max-width: 576px;
-    }
     &__container {
       z-index: 2;
       display: grid;
       max-width: 1340px;
       margin: auto;
       grid-template-columns: auto 1fr;
-      padding: 37px 20px 0 20px;
+      padding: 38px 20px 0 20px;;
       box-sizing: border-box;
     }
   }
@@ -171,15 +174,12 @@
       justify-content: end;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
 
-      @include lg {
+      @include lg-md {
         margin-right: -10px;
       }
 
       @include md {
         display: none;
-      }
-
-      @include md {
         position: absolute;
         background-color: rgba(68, 89, 110, 0.9);
         padding-top: 0px;
@@ -212,7 +212,7 @@
       justify-content: end;
       &__btn {
         width: 30px;
-        margin-top: 2px;
+        margin-top: 1px;
         height: 22.5px;
         position: relative;
         transform: rotate(0deg);

@@ -20,7 +20,7 @@
       grid-template-columns: repeat(4, 1fr);
     }
 
-    @include lg {
+    @include lg-md {
       grid-template-areas:
         "a1 a1 a2"
         "a3 a4 a4"
@@ -29,7 +29,7 @@
         "a7 a9 a9";
       grid-template-columns: repeat(3, 1fr);
     }
-    @include md {
+    @include md-sm {
       grid-template-areas:
         "a1 a2"
         "a3 a2"
@@ -69,10 +69,10 @@
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    @include lg {
+    @include lg-min {
       padding-left: 0px;
     }
-    @include md {
+    @include md-sm {
       padding-top: 20px;
     }
     @include sm {
@@ -156,11 +156,12 @@
     text-align: center;
     transition: background-color 0.5s, border-color 0.5s, color 0.5s;
 
-    @include md {
+    @include md-sm {
       letter-spacing: 0.1em;
       font-size: 1.125rem;
     }
     @include sm {
+      letter-spacing: 0.1em;
       font-size: 1.125rem;
     }
   }

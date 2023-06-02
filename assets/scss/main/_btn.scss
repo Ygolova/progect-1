@@ -9,12 +9,12 @@
   color: #ffffff;
   font-weight: 400;
   font-family: "Roboto";
-  @include lg {
+  @include lg-sm {
     width: 346px;
     height: 56px;
   }
   @include sm {
-    width: calc(100% - 3px);
+    width: calc(100% - 4px);
   }
   &:hover,
   &:focus {
@@ -50,12 +50,11 @@
   height: 54px;
   border: 2px solid #ffffff;
   background-color: #ffffff1a;
-  @include lg {
+  @include lg-md {
     display: grid;
     width: 196px;
-    height: 32px;
-    padding-top: 12px;
-    align-items: start;
+    height: 46px;
+    padding-bottom: 0px;
   }
   @include md {
     display: grid;

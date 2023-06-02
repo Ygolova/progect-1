@@ -3,11 +3,14 @@
   padding-top: 100px;
   margin: auto;
   justify-content: center;
-  @include lg {
+  @include lg-md {
     padding-top: 80px;
   }
   @include md {
     padding-top: 61px;
+  }
+  @include sm {
+    padding-top: 60px;
   }
 
   & h2 {
@@ -18,7 +21,7 @@
     color: #2d3651;
     font-weight: 700;
     font-family: "Roboto Slab";
-    @include lg {
+    @include lg-md {
       font-size: 2rem;
       letter-spacing: 0.1em;
       line-height: 40px;
@@ -27,28 +30,30 @@
       padding-bottom: 41px;
       margin-top: -1px;
     }
-    @include md {
+    @include md-sm {
       max-width: 724px;
       height: 53px;
+      margin-top: -1px;
       font-size: 1.5rem;
       letter-spacing: 0.1em;
       padding-bottom: 12px;
       line-height: 1.2em;
     }
     @include sm {
+      font-size: 1.5rem;
       padding-bottom: 0px;
       width: 100%;
+      line-height: 1.2em;
+      letter-spacing: 0.1em;
       height: 64px;
       text-align: center;
-      margin-bottom: 1px;
     }
   }
 
   &__container {
     max-width: 1300px;
     padding: 0 20px;
-    @include lg {
-    }
+
     @include sm {
       max-width: 576px;
       padding: 0 20px;
@@ -61,7 +66,7 @@
       "p4 p5 p6 p6";
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px 20px;
-    @include lg {
+    @include lg-md {
       grid-template-areas:
         "p1 p1 p2"
         "p3 p4 p4"
@@ -69,7 +74,7 @@
       grid-template-columns: repeat(3, 1fr);
       padding-bottom: 20px;
     }
-    @include md {
+    @include md-sm {
       grid-template-areas:
         "p1 p2"
         "p3 p4"
@@ -86,6 +91,7 @@
         "p5"
         "p6";
       grid-template-columns: 1fr;
+      padding-bottom: 20px;
     }
   }
 
@@ -95,14 +101,16 @@
     justify-content: center;
     margin-left: 0px;
     margin-bottom: 100px;
-    @include lg {
+    @include lg-md {
       margin-top: 0px;
       margin-bottom: 80px;
     }
-    @include md {
+    @include md-sm {
+      margin-top: 0px;
       margin-bottom: 60px;
     }
     @include sm {
+      margin-top: 0px;
       display: flex;
       margin-bottom: 60px;
     }
@@ -121,10 +129,10 @@
   right: -52px;
   content: "";
   background-color: rgba(99, 117, 136, 0.1);
-  @include lg {
+  @include lg-md {
     right: -25px;
   }
-  @include md {
+  @include md-sm {
     right: -10px;
   }
   @include sm {
@@ -144,17 +152,9 @@ img {
   background-color: #f2f2f2;
   height: 100%;
   transition: background-color 0.5s;
-  @include lg {
-  }
-  @include md {
-    height: 542px;
-  }
-  @include sm {
-    height: 484px;
-  }
   &__link {
     width: 100%;
-    background-color: #eeeeee;
+    background-color: #f2f2f2;
     display: grid;
     height: 100%;
     grid-template-rows: 300px 1fr;
@@ -195,24 +195,23 @@ img {
     text-align: center;
     align-content: center;
     @include sm {
-      padding: 21px 20px 40px 21px;
+      padding: 20px;
     }
     & h3 {
-      padding: 17px 0;
+      padding: 18px 0 17px 0;
       line-height: 1.15;
       letter-spacing: 0.05em;
       font-size: 1.125rem;
       font-family: "Roboto Slab";
       @include lg {
-        padding: 18px 0;
-        line-height: 1.15;
+    padding: 18px 0 18px 0;
       }
     }
 
     & p {
-      margin: 15px 0;
+      margin: 16px 0;
+      line-height: 1.16;
       @include lg {
-        margin: 16px 0;
         line-height: 1.15;
       }
     }
@@ -220,11 +219,11 @@ img {
   & .btn--primary {
     width: 350px;
     height: 60px;
-    @include lg {
+    @include lg-md {
       padding-bottom: 2px;
     }
 
-    @include md {
+    @include md-sm {
       height: 60px;
       padding-top: 2px;
     }
