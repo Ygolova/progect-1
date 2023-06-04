@@ -6,11 +6,14 @@ const postcss = require('gulp-postcss');
 const csscomb = require('gulp-csscomb');
 const cssnano = require('cssnano');
 const rename = require('gulp-rename');
-const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
 const sortCSSmq = require('sort-css-media-queries');
 
 const option = process.argv[3];
+
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
+
 
 const PATH = {
   scssFolder: './assets/scss/',
@@ -30,8 +33,8 @@ const PLUGINS = [
   dc({ discardComments: true }),
   autoprefixer({
     overrideBrowserslist: [
-      'last 5 versions',
-      '> 0.1%'
+      "> 2%",
+      "last 2 versions"
     ],
     cascade: true
   }),
@@ -66,6 +69,7 @@ function scssDev() {
   return src(PATH.scssRoot, {sourcemaps: true})
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(pluginsForDevMode))
+    .pipe(autoprefixer())
     .pipe(dest(PATH.cssFolder, {sourcemaps: true}))
     .pipe(browserSync.stream());
 }

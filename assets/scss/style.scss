@@ -1,17 +1,9 @@
-@import "presets/variables";
-@import "presets/mixins-media";
-
-@import "header/header";
-
-@import "main/btn";
-@import "main/main";
-
-@import "footer/footer";
-
 * {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+
+@import "../../libs/normalize.css/normalize";
 
 input:focus {
   outline: none;
@@ -31,13 +23,22 @@ a {
 }
 
 h1 {
-    font-size: 3.75rem;
-    padding-left: 7px;
-    letter-spacing: 0.08em;
-    color: #ffffff;
-    font-weight: 300;
-    font-family: "Roboto Slab";
-    margin: 5px;
+  font-size: 3.75rem;
+  padding-left: 7px;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  font-weight: 300;
+  font-family: "Roboto Slab";
+  margin: 5px;
 }
 
+@import "presets/variables";
+@import "presets/mixins-media";
+
+@import "header/header";
+
+@import "main/btn";
+@import "main/main";
+
+@import "footer/footer";
 /*# sourceMappingURL=style.css.map */

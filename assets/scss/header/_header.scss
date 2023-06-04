@@ -5,14 +5,7 @@
   position: relative;
   background-position: 50% 50%;
   background-size: cover;
-  height: 100vh;
-  @include lg-min {
-    height: 100vh;
-  }
-
-  @include sm {
-    height: 100vh;
-  }
+  min-height: 100vh;
 
   &-logo {
     font-size: 1.5rem;
@@ -61,7 +54,7 @@
 
       @include sm {
         margin-top: 20px;
-        width: 330px;
+        max-width: 330px;
         font-size: 1.875rem;
         letter-spacing: 0.08em;
         margin-top: 19px;
