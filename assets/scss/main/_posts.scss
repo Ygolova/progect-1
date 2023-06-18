@@ -1,8 +1,10 @@
 .posts {
   display: grid;
-  padding-top: 100px;
-  margin: auto;
   justify-content: center;
+
+  margin: auto;
+  padding-top: 100px;
+
   @include lg-md {
     padding-top: 80px;
   }
@@ -15,38 +17,49 @@
 
   & h2 {
     padding-bottom: 48px;
-    font-size: 40px;
+
     letter-spacing: 4px;
-    line-height: 48px;
+
     color: #2d3651;
-    font-weight: 700;
+
     font-family: "Roboto Slab";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+
     @include lg-md {
-      font-size: 2rem;
-      letter-spacing: 0.1em;
-      line-height: 40px;
-      color: #2d3651;
-      font-weight: 700;
-      padding-bottom: 41px;
       margin-top: -1px;
+      padding-bottom: 41px;
+
+      letter-spacing: 0.1em;
+
+      color: #2d3651;
+
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 40px;
     }
     @include md-sm {
       max-width: 724px;
       height: 53px;
       margin-top: -1px;
-      font-size: 1.5rem;
-      letter-spacing: 0.1em;
       padding-bottom: 12px;
+
+      letter-spacing: 0.1em;
+
+      font-size: 1.5rem;
       line-height: 1.2em;
     }
     @include sm {
-      font-size: 1.5rem;
-      padding-bottom: 0px;
       width: 100%;
-      line-height: 1.2em;
-      letter-spacing: 0.1em;
       height: 64px;
+      padding-bottom: 0;
+
       text-align: center;
+      letter-spacing: 0.1em;
+
+      font-size: 1.5rem;
+      line-height: 1.2em;
     }
   }
 
@@ -61,74 +74,81 @@
   }
   &__grid {
     display: grid;
-    grid-template-areas:
-      "p1 p1 p2 p3"
-      "p4 p5 p6 p6";
-    grid-template-columns: repeat(4, 1fr);
+
     grid-gap: 20px 20px;
+    grid-template-areas: "p1 p1 p2 p3"
+    "p4 p5 p6 p6";
+    grid-template-columns: repeat(4, 1fr);
     @include lg-md {
-      grid-template-areas:
-        "p1 p1 p2"
-        "p3 p4 p4"
-        "p5 p5 p6";
-      grid-template-columns: repeat(3, 1fr);
       padding-bottom: 20px;
+
+      grid-template-areas: "p1 p1 p2"
+      "p3 p4 p4"
+      "p5 p5 p6";
+      grid-template-columns: repeat(3, 1fr);
     }
     @include md-sm {
-      grid-template-areas:
-        "p1 p2"
-        "p3 p4"
-        "p5 p6";
-      grid-template-columns: repeat(2, 1fr);
       padding-bottom: 20px;
+
+      grid-template-areas: "p1 p2"
+      "p3 p4"
+      "p5 p6";
+      grid-template-columns: repeat(2, 1fr);
     }
     @include sm {
-      grid-template-areas:
-        "p1"
-        "p2"
-        "p3"
-        "p4"
-        "p5"
-        "p6";
-      grid-template-columns: 1fr;
       padding-bottom: 20px;
+
+      grid-template-areas: "p1"
+      "p2"
+      "p3"
+      "p4"
+      "p5"
+      "p6";
+      grid-template-columns: 1fr;
     }
   }
 
   &__actions {
     display: grid;
-    margin-top: 20px;
     justify-content: center;
-    margin-left: 0px;
+
+    margin-top: 20px;
     margin-bottom: 100px;
+    margin-left: 0;
+
     @include lg-md {
-      margin-top: 0px;
+      margin-top: 0;
       margin-bottom: 80px;
     }
     @include md-sm {
-      margin-top: 0px;
+      margin-top: 0;
       margin-bottom: 60px;
     }
     @include sm {
-      margin-top: 0px;
       display: flex;
+
+      margin-top: 0;
       margin-bottom: 60px;
     }
   }
 }
 
 .fa-pinterest {
-  color: #000;
+  color: #000000;
 }
 
 .about__content p:first-of-type::after {
   position: absolute;
   top: 0;
+  right: -52px;
+
   width: 2px;
   height: 200px;
-  right: -52px;
+
   content: "";
+
   background-color: rgba(99, 117, 136, 0.1);
+
   @include lg-md {
     right: -25px;
   }
@@ -149,16 +169,22 @@ img {
 }
 
 .post-item {
-  background-color: #f2f2f2;
   height: 100%;
+
   transition: background-color 0.5s;
+
+  background-color: #f2f2f2;
   &__link {
-    width: 100%;
-    background-color: #f2f2f2;
     display: grid;
+
+    width: 100%;
     height: 100%;
-    grid-template-rows: 300px 1fr;
+
     transition: background-color 0.5s;
+
+    background-color: #f2f2f2;
+
+    grid-template-rows: 300px 1fr;
   }
 
   &__link:hover {
@@ -171,15 +197,18 @@ img {
 
   &__image {
     display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
     overflow: hidden;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
 
     & img {
       width: 100%;
+
       @include lg {
         width: 100%;
+
         object-fit: cover;
       }
     }
@@ -187,30 +216,40 @@ img {
 
   &__caption {
     display: grid;
-    padding: 20px;
-    font-size: 16px;
-    color: #637588;
-    font-weight: 400;
-    font-family: "Roboto";
-    text-align: center;
     align-content: center;
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: #637588;
+
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
+
     @include sm {
       padding: 20px;
     }
     & h3 {
       padding: 18px 0 17px 0;
-      line-height: 1.15;
+
       letter-spacing: 0.05em;
-      font-size: 1.125rem;
+
       font-family: "Roboto Slab";
+      font-size: 1.125rem;
+      line-height: 1.15;
+
       @include lg {
-    padding: 18px 0 18px 0;
+        padding: 18px 0 18px 0;
       }
     }
 
     & p {
       margin: 16px 0;
+
       line-height: 1.16;
+
       @include lg {
         line-height: 1.15;
       }
@@ -219,15 +258,14 @@ img {
   & .btn--primary {
     width: 350px;
     height: 60px;
+
     @include lg-md {
       padding-bottom: 2px;
     }
-
     @include md-sm {
       height: 60px;
       padding-top: 2px;
     }
-
     @include sm {
       width: 100%;
     }

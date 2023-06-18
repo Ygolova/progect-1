@@ -1,12 +1,16 @@
 .footer {
-  text-align: center;
-  background-color: #2d3651;
   box-sizing: border-box;
+
+  text-align: center;
+
+  background-color: #2d3651;
 
   &__container {
     max-width: 1340px;
-    background-color: #2d3651;
     margin: auto;
+
+    background-color: #2d3651;
+
     @include lg-min {
       max-width: 992px;
     }
@@ -19,12 +23,14 @@
   }
 
   &__social {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-    justify-content: center;
     position: relative;
+
+    display: grid;
+    justify-content: center;
+
     padding-top: 50px;
 
+    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     @include md {
       padding-top: 50px;
     }
@@ -34,12 +40,15 @@
     }
 
     &::after {
-      content: "";
       position: absolute;
       bottom: -20px;
       left: calc(50% - 37.5px);
+
       width: 75px;
       height: 2px;
+
+      content: "";
+
       background-color: rgba(255, 255, 255, 0.1);
     }
   }
@@ -47,17 +56,23 @@
   &__copy {
     margin-top: 40px;
     padding-bottom: 70px;
-    font-size: 16px;
-    letter-spacing: 0.05em;
-    color: white;
-    font-weight: 700;
-    font-family: "Roboto";
+
     text-align: center;
-    @include lg-md{
+    letter-spacing: 0.05em;
+
+    color: white;
+
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 700;
+
+    @include lg-md {
       margin-top: 39px;
       padding-bottom: 70px;
-      font-size: 16px;
+
       letter-spacing: 0.05em;
+
+      font-size: 16px;
       line-height: 19px;
     }
     @include md-sm {
@@ -66,14 +81,18 @@
     }
     @include sm {
       margin-top: 40px;
-      line-height: 1.14;
       padding-bottom: 69px;
+
+      line-height: 1.14;
     }
     & span:nth-of-type(1) {
       margin-left: 8px;
+
       letter-spacing: 0.33em;
-      font-weight: 100;
+
       color: #637588;
+
+      font-weight: 100;
     }
 
     & span:nth-of-type(2) {
@@ -82,7 +101,8 @@
   }
 
   .fab {
-    font-size: 36px;
     padding: 10px;
+
+    font-size: 36px;
   }
 }

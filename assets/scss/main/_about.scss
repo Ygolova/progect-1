@@ -2,104 +2,124 @@
 @import "../presets/mixins-media";
 
 .about {
-  background-color: #e5e5e5;
-  padding-top: 100px;
-  letter-spacing: 0.055em;
-  padding-bottom: 85px;
-  padding-right: 69px;
   margin: auto;
-  @include lg-md {
-    padding-bottom: 64px;
-    padding-top: 80px;
-    letter-spacing: 0.055em;
-    position: relative;
-  }
+  padding-top: 100px;
+  padding-right: 69px;
+  padding-bottom: 85px;
 
+  letter-spacing: 0.055em;
+
+  background-color: #e5e5e5;
+
+  @include lg-md {
+    position: relative;
+
+    padding-top: 80px;
+    padding-bottom: 64px;
+
+    letter-spacing: 0.055em;
+  }
   @include md-sm {
     width: 100%;
-    padding-bottom: 44px;
     padding-top: 60px;
+    padding-bottom: 44px;
     padding-left: 2px;
   }
-
   @include sm {
     width: 100%;
-    padding-left: 2px;
-    padding-top: 60px;
     max-width: 576px;
+    padding-top: 60px;
     padding-bottom: 49px;
+    padding-left: 2px;
   }
 
   & h2 {
-    font-size: 40px;
-    letter-spacing: 4px;
-    line-height: 48px;
-    color: #2d3651;
-    font-weight: 700;
-    font-family: "Roboto Slab";
     padding-bottom: 43px;
+
+    letter-spacing: 4px;
+
+    color: #2d3651;
+
+    font-family: "Roboto Slab";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+
     @include lg-md {
-      letter-spacing: 0.1em;
       padding-bottom: 37px;
-      line-height: 1.2em;
-      font-size: 2rem;
-    }
 
-    @include md-sm {
-      font-size: 1.5rem;
       letter-spacing: 0.1em;
-      line-height: 1.2em;
-      padding-bottom: 31px;
-    }
 
-    @include sm {
+      font-size: 2rem;
       line-height: 1.2em;
+    }
+    @include md-sm {
+      padding-bottom: 31px;
+
+      letter-spacing: 0.1em;
+
+      font-size: 1.5rem;
+      line-height: 1.2em;
+    }
+    @include sm {
       max-width: 532px;
       height: 69px;
-      font-size: 1.5rem;
-      letter-spacing: 0.1em;
-      padding-left: 1px;
-      text-align: center;
       padding-bottom: 19px;
+      padding-left: 1px;
+
+      text-align: center;
+      letter-spacing: 0.1em;
+
+      font-size: 1.5rem;
+      line-height: 1.2em;
     }
   }
 
   &__content {
     display: grid;
+
     max-width: 927px;
     height: 100%;
-    font-size: 18px;
-    line-height: 1.18;
+
     color: #637588;
-    font-weight: 400;
+
     font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.18;
+
     @include lg-md {
-      line-height: 1.15;
       max-width: 635px;
-      font-size: 16px;
       height: 100%;
+
+      font-size: 16px;
+      line-height: 1.15;
     }
     @include md-sm {
       max-width: 471px;
     }
     @include sm {
-      font-size: 16px;
       display: block;
-      line-height: 1.15;
+
       max-width: 537px;
       height: calc(100% - 20px);
+
+      font-size: 16px;
+      line-height: 1.15;
     }
 
     & p {
       padding-bottom: 16px;
 
       @include md {
-        font-size: 16px;
         letter-spacing: 0.055em;
-        line-height: 1.15;
+
         color: #637588;
-        font-weight: 400;
+
         font-family: "Roboto";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.15;
       }
 
       &:nth-of-type(3) {
@@ -111,49 +131,57 @@
   }
 
   &__container {
-    max-width: 1231px;
     display: grid;
-    grid-template-columns: 1fr 200px;
-    gap: 93px;
-    padding: 0 20px;
+
+    max-width: 1231px;
     margin: auto;
+    padding: 0 20px;
+
+    gap: 93px;
+    grid-template-columns: 1fr 200px;
     @include lg-md {
-      padding: 0;
       position: relative;
+
+      padding: 0;
       padding-left: 20px;
+
       gap: 66px;
     }
     @include md-sm {
       padding: 0;
       padding-left: 18px;
+
       gap: 66px;
     }
     @include sm {
-      padding-left: 18px;
       display: block;
-      grid-template-columns: 1fr;
+
+      padding-left: 18px;
+
       gap: 0;
+      grid-template-columns: 1fr;
     }
   }
 
   &__image {
     margin-top: 3px;
+
     @include lg-md {
       width: 100%;
     }
-
     @include md-sm {
       margin-top: 65px;
       margin-left: -39px;
     }
-
     @include sm {
-      display: grid;
       position: static;
-      height: 100%;
-      margin-left: -2px;
+
+      display: grid;
       justify-content: center;
+
+      height: 100%;
       margin-top: -7px;
+      margin-left: -2px;
     }
     & img {
       @include lg-min {
@@ -163,21 +191,21 @@
       }
       @include lg-md {
         width: 267px;
-        padding-top: 11px;
         margin-left: -20px;
+        padding-top: 11px;
       }
       @include md-sm {
-        padding-top: 10px;
         width: 236px;
         height: 425px;
         margin-left: -20px;
+        padding-top: 10px;
         padding-left: 1px;
       }
       @include sm {
         width: 100%;
         max-height: 480px;
-        padding-top: 12px;
         margin-bottom: 11px;
+        padding-top: 12px;
       }
     }
   }

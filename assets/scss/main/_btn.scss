@@ -1,14 +1,19 @@
 .btn--primary {
   display: grid;
+
   width: 346px;
   height: 56px;
-  background-color: rgba(45, 54, 81, 0.8);
-  border: 2px solid #2d3651;
-  font-size: 1.125rem;
+
   letter-spacing: 0.1em;
+
   color: #ffffff;
-  font-weight: 400;
+  border: 2px solid #2d3651;
+  background-color: rgba(45, 54, 81, 0.8);
+
   font-family: "Roboto";
+  font-size: 1.125rem;
+  font-weight: 400;
+
   @include lg-sm {
     width: 346px;
     height: 56px;
@@ -18,8 +23,8 @@
   }
   &:hover,
   &:focus {
-    background-color: #d66926;
     border-color: white;
+    background-color: #d66926;
   }
 }
 
@@ -33,8 +38,9 @@
 
 .btn {
   display: grid;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
   transition: background-color 0.5s;
 }
 
@@ -45,22 +51,27 @@
 
 .btn--light {
   width: 246px;
-  letter-spacing: 0.1em;
-  padding-bottom: 2px;
   height: 54px;
+  padding-bottom: 2px;
+
+  letter-spacing: 0.1em;
+
   border: 2px solid #ffffff;
   background-color: #ffffff1a;
+
   @include lg-md {
     display: grid;
+
     width: 196px;
     height: 46px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
   @include md {
     display: grid;
-    padding-top: 0;
+    align-items: center;
+
     width: 166px;
     height: 34px;
-    align-items: center;
+    padding-top: 0;
   }
 }
